@@ -1,0 +1,6 @@
+library(robustbase)
+data(possumDiv, package="robustbase")
+possum40 = as.data.frame(possum.mat)
+reglog <- glm(Diversity ~ Stags + BAcacia + Bark + factor(Stumps), data =possum40, family="poisson")
+summary(reglog)
+coef(reglog)
